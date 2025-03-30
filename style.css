@@ -1,0 +1,91 @@
+html {
+    scroll-behavior: smooth;
+  }
+  .swap-text {
+    display: inline-block;
+    opacity: 1;
+    position: relative;
+    transition: opacity 0.3s ease-out;
+  }
+  
+  /* Animație rapidă de glitch pe culoare și blur */
+ /* Animație de glitch cu schimbări clare */
+@keyframes glitch {
+    0% {
+      transform: translateX(0) skew(0deg);
+      opacity: 1;
+      filter: blur(0);
+      color: white;
+    }
+    25% {
+      transform: translateX(-5px) skew(-5deg);
+      opacity: 0.8;
+      filter: blur(2px);
+      color: red; /* Schimbă culoarea în roșu */
+    }
+    50% {
+      transform: translateX(5px) skew(5deg);
+      opacity: 0.6;
+      filter: blur(2px);
+      color: blue; /* Schimbă culoarea în albastru */
+    }
+    75% {
+      transform: translateX(-5px) skew(-5deg);
+      opacity: 0.8;
+      filter: blur(1px);
+      color: green; /* Schimbă culoarea în verde */
+    }
+    100% {
+      transform: translateX(0) skew(0deg);
+      opacity: 1;
+      filter: blur(0);
+      color: white;
+    }
+  }
+  
+  /* Clasa pentru aplicația efectului glitch */
+  .swap-text.glitch {
+    animation: glitch 0.5s infinite; /* Glitch-ul se repeta pe durata de 0.5s */
+  }
+  
+
+  .font-bold-header {
+    font-weight: bold;
+    text-decoration:underline;
+  }
+  
+  /* Tranziția de text a butonului */
+  button.transition {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  button.thank-you {
+    background-color:transparent !important;
+    color:black;
+  }
+  button.thank-you:hover {
+    background-color:transparent;
+  }
+
+  .coffee-section {
+    background-image: url('path_to_placeholder_image.jpg'); /* Imagine temporară pentru lazy loading */
+  }
+  
+  @keyframes jiggle {
+    0%, 100% { transform: translateX(0px); }
+    25% { transform: translateX(5px); }
+    50% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+  }
+  
+  .jiggle {
+    animation: jiggle 0.4s ease;
+  }
+  
+  .bg-transparent {
+    background-color: transparent !important;
+    color: black !important;
+  }
+  
+  
+  
